@@ -18,26 +18,22 @@ public class SeleniumOne {
         driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         System.out.println("User berhasil login");
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a")).click();
+        driver.findElement(By.xpath("//span[normalize-space()='Recruitment']")).click();
         System.out.println("Menu Admin Clicked");
 
         delay(2);
-        WebElement selectByRole = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]"));
-        selectByRole.sendKeys("a");
+        WebElement selectByRole = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]"));
+        selectByRole.sendKeys("l" + Keys.ENTER);
         System.out.println("Hiring Manager");
+
+        WebElement txtAdmin = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]"));
+        System.out.println(txtAdmin.getText());
 
         delay(2);
         WebElement clickBtnSubmit = driver.findElement(By.xpath("//button[@type='submit']"));
         clickBtnSubmit.click();
-        delay(2);
-        clickBtnSubmit.click();
-        delay(2);
-        clickBtnSubmit.click();
         System.out.println("Button search cliked");
-//        driver.findElement(By.xpath("//button[normalize-space()='Add']")).click();
-//        System.out.println("Button Add Clicked");
-//        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[4]/div/div/div/div/div[2]/input")).sendKeys("C:\\Users\\Dzikra Shanum\\Pictures\\Resume.txt");
-//        System.out.println("Input File TXT");
+
         delay(5);
         System.out.println("Browser Quit");
     }

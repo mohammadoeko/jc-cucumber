@@ -6,7 +6,8 @@ public enum TestScenarios {
     T2("User valid login"),
     T3("Dashboard user function"),
     T4("Recruitment user function"),
-    T5("Candidates search by hiring manager");
+    T5("Add recruitment candidates"),
+    T6("Candidates search by date");
 
 
     private String testName;
