@@ -44,8 +44,8 @@ public class Hooks {
 
     @AfterAll
     public static void closeBrowser() {
-//        delay(3);
-//        DriverSingleton.closeObjectInstance();
+        delay(3);
+        DriverSingleton.closeObjectInstance();
     }
 
     public static void delay(int detik) {
