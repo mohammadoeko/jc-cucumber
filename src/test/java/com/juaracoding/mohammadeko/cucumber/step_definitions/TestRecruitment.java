@@ -6,6 +6,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -33,7 +34,7 @@ public class TestRecruitment {
         extentTest.log(LogStatus.PASS, "User on menu recruitment");
     }
 
-    //Test case two
+    //Test case three
     @When("User select search Linda Anderson by hiring manager")
     public void user_select_by_hiring_manager() {
         recruitmentPage.searchByHiringManager();
